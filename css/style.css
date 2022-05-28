@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+}
+
+body {
+  background-color: #121214;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main.container {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+main.container header h1 {
+  color: #FFF;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main.container header h1 span {
+  color: #06B656;
+}
+
+main.container section.card {
+  background-color: #202024;
+  padding: 20px;
+  border-radius: 10px;
+  height: 355px;
+}
+
+main.container section.card div.input-field {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+main.container section.card div.input-field input {
+  background-color: #121214;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  padding: 10px;
+  color: #FFF;
+}
+
+main.container section.card div.input-field input:focus {
+  outline: 2px solid #06B656;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+}
+
+main.container section.card div.input-field label {
+  display: block;
+  font-size: 1.9rem;
+  color: #757575;
+  margin: 0 18px;
+  position: relative;
+  padding-left: 22px;
+}
+
+main.container section.card div.input-field label input[type='radio'] {
+  display: none;
+}
+
+main.container section.card div.input-field label span {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  border: 3px solid #06B656;
+  display: block;
+  position: absolute;
+  left: -5px;
+  top: 7px;
+  cursor: pointer;
+}
+
+main.container section.card div.input-field label span::after {
+  content: '';
+  height: 9px;
+  width: 9px;
+  background-color: #06B656;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: 100ms ease-in-out 0s;
+}
+
+main.container section.card div.input-field label input[type='radio']:checked ~ span::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+main.container section.card div.input-field label input[type='radio']:focus {
+  outline: none;
+}
+
+main.container section.card div.button-field button {
+  background-color: #06B656;
+  color: #FFF;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;  
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition:  background 0.5s;
+  cursor: pointer;
+}
+
+main.container section.card div.button-field button:hover {
+  background: #12e772;
+}
+
+main.container section.card div.result-field {
+  margin-top: 20px;
+  text-align: center;
+  color: #12e772;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 364px) {
+  main.container {
+    max-width: 270px;
+    margin: 0 auto;
+    transition: 1s;
+  }
+
+  main.container section.card div.input-field input {
+    padding: 10px 2px;
+  }
+
+  main.container section.card div.input-field input::placeholder {
+    padding: 0px 10px;
+  }
+
+  main.container header h1 {
+    font-size: 1.9rem;
+  }
+}
+
