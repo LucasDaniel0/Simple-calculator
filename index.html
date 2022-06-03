@@ -13,60 +13,67 @@
         <h1>Simple <span>Calculator</span></h1>
       </header>
 
-      <section class="card">
-        <div class="form">
-          <div class="input-field">
-            <input
-              type="number"
-              name="first-number"
-              id="firstNumber"
-              placeholder="Enter the first number"
-            />
-          </div>
+      <form id="main-form">
+        <section class="card">
+          <div class="form">
+            <div class="input-field">
+              <input
+                type="number"
+                name="first-number"
+                id="firstNumber"
+                placeholder="Enter the first number"
+                autofocus
+                step=".0000001"
+                min="0"
+              />
+            </div>
 
-          <div class="input-field">
-          <label class="radio">
-            +
-            <input type="radio" name="operation" id="+">
-            <span></span>
-          </label>
+            <div class="input-field">
+              <label class="radio">
+                +
+                <input type="radio" name="operation" id="+" checked />
+                <span></span>
+              </label>
 
-          <label class="radio">
-            -
-            <input type="radio" name="operation" id="-">
-            <span></span>
-          </label>
-          <label class="radio">
-            *
-            <input type="radio" name="operation" id="*">
-            <span></span>
-          </label>
-          
-          <label class="radio">
-            /
-            <input type="radio" name="operation" id="/">
-            <span></span>
-          </label>
-          </div>
+              <label class="radio">
+                -
+                <input type="radio" name="operation" id="-" />
+                <span></span>
+              </label>
+              <label class="radio">
+                *
+                <input type="radio" name="operation" id="*" />
+                <span></span>
+              </label>
 
-          <div class="input-field">
-            <input
-              type="number"
-              name="second-number"
-              id="secondNumber"
-              placeholder="Enter the second number"
-            />
-          </div>
+              <label class="radio">
+                /
+                <input type="radio" name="operation" id="/" />
+                <span></span>
+              </label>
+            </div>
 
-          <div class="button-field">
-            <button onclick="calcular()">Calculate</button>
+            <div class="input-field">
+              <input
+                type="number"
+                name="second-number"
+                id="secondNumber"
+                placeholder="Enter the second number"
+                step=".0000001"
+                min="0"
+              />
+            </div>
+
+            <div class="button-field">
+              <button onclick="calcular()">Calculate</button>
+            </div>
+
+            <div class="result-field">
+              <span id="result"></span>
+            </div>
           </div>
-          
-          <div class="result-field">
-            <span id="result"></span>
-          </div> 
-        </div>
-      </section>
+        </section>
+      </form>
     </main>
 
     <script src="js/script.js"></script>
